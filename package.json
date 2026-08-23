@@ -1,0 +1,33 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "This is namst react by ashish ",
+  "keywords": [
+    "react",
+    "shivik",
+    "ashish"
+  ],
+  "homepage": "https://github.com/ashish271-coder/namste-react-#readme",
+  "bugs": {
+    "url": "https://github.com/ashish271-coder/namste-react-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashish271-coder/namste-react-.git"
+  },
+  "license": "ISC",
+  "author": "\"ashish\"",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}

@@ -1,15 +1,6 @@
-const heading = React.createElement("div", {id: "parent"},[
-    React.createElement("div", {id: "child"},
-    [ React.createElement("h1",{id: "heading"}, "namskara"),
-         React.createElement("h2",{id: "heading"}, "shivik"),
-    ]),
-     React.createElement("div", {id: "child"},
-    [ React.createElement("h1",{id: "heading"}, "namskara"),
-         React.createElement("h2",{id: "heading"}, "shivik"),
-    ])
-]
-);
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-
- const root = ReactDOM.createRoot(document.getElementById("root"));
- root.render(heading);
+const heading = React.createElement("h1",{kay:1},"Namaste React");
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading);
