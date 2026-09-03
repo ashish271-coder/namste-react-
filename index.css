@@ -1,3 +1,21 @@
-*{
-    color: brown;
+.header {
+    display: flex;
+    justify-content: space-between;
+    border : 1px solid black;
+}
+.logo img{
+    width: 90px;
+}   
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+}
+.nav-items > ul > li{
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.restaurant-card{
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
 }
