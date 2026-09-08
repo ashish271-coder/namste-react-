@@ -15,7 +15,21 @@
     padding: 10px 20px;
 }
 .restaurant-card{
+    padding: 5px;
     width: 200px;
     height: 300px;
     border: 1px solid black;
+}
+.restaurant-card:hover{
+    border: 1px solid orangered;
+    cursor: pointer;
+}
+.res-logo{
+  
+    width: 100%;
+}
+.restaurant-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
