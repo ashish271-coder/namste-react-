@@ -17,7 +17,7 @@
 .restaurant-card{
     padding: 5px;
     width: 200px;
-    height: 300px;
+    height: 350px;
     border: 1px solid black;
 }
 .restaurant-card:hover{
@@ -25,7 +25,7 @@
     cursor: pointer;
 }
 .res-logo{
-  
+    height: 130px;
     width: 100%;
 }
 .restaurant-container{
