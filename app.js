@@ -24,16 +24,23 @@ import ReactDOM from "react-dom/client";
    }
    const RestaurantCard = (props) => {
       const{resData} = props;
+      const {
+         cloudinaryImageId,
+         cuisines,
+         avgRating,costForTwo,
+         name
+      } = resData?.info;
+      const{deliveryTime} = resData?.info.sla;
       return (
          <div className="restaurant-card" style = {{ backgroundColor: "#f0f0f0" }}>
             <img className="res-logo"
                alt="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
          +resData.info.cloudinaryImageId}></img>
-            <h3>{resData.info.name}</h3>
-            <h4>{resData.info.cuisines.join(",")}</h4>
-            <h4>{resData.info.avgRating}star</h4>
-             <h4>{resData.info.costForTwo}</h4>
-              <h4>{resData.info.sla.slaString}</h4>
+            <h3>{name}</h3>
+            <h4>{cuisines.join(",")}</h4>
+            <h4>{avgRating}star</h4>
+             <h4>{costForTwo}</h4>
+              <h4>{deliveryTime}minutes</h4>
          </div>
       );
    };
@@ -258,7 +265,7 @@ import ReactDOM from "react-dom/client";
 {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "1386799",
+"id": "13867990",
 "name": "Theobroma",
 "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/9/11/ae136c75-3b6b-4871-8456-c356382a008f_1386799.jpg",
 "locality": "Kirti Nagar Metro Station Road",
@@ -825,7 +832,7 @@ import ReactDOM from "react-dom/client";
 {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "683154",
+"id": "68315400",
 "name": "La Pino'z Pizza",
 "cloudinaryImageId": "231e86161a0091cd2137367c39b5943e",
 "locality": "Tagore Market",
@@ -908,9 +915,10 @@ import ReactDOM from "react-dom/client";
 "type": "WEBLINK"
 },
 "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
-},{
+},
+{
          "info": {
-"id": "51753",
+"id": "5175300",
 "name": "Everbake",
 "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/8/9/7762dfd6-0ad8-4fd2-ad8b-f34fab29f279_51753.jpg",
 "locality": "Vashisht Kumar Gulla Marg",
@@ -1011,7 +1019,7 @@ import ReactDOM from "react-dom/client";
 {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "132206",
+"id": "1322060",
 "name": "Biryani By Kilo",
 "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/9/1/0e2fc8f0-e76f-4425-9dc2-22a06b592081_132206.JPG",
 "locality": "A Block ",
@@ -1239,7 +1247,7 @@ import ReactDOM from "react-dom/client";
 {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "1334079",
+"id": "13340790",
 "name": "KFC",
 "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/7/1/d7a72e1e-de5d-4daf-90bc-240270b04a4b_1334079.JPG",
 "locality": "Epicah Mall",
@@ -1360,7 +1368,7 @@ import ReactDOM from "react-dom/client";
 {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "1002383",
+"id": "10023830",
 "name": "McDonald's",
 "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/9/5f636a4b-bee7-4811-b5db-ae71d42c7a56_1002383.JPG",
 "locality": "Najafgarh Road",
@@ -1481,7 +1489,7 @@ import ReactDOM from "react-dom/client";
 {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "559120",
+"id": "5591200",
 "name": "Subway",
 "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/12/4a1c040e-4d68-4682-8511-39cb609468c9_559120.jpg",
 "locality": "Kirti Nagar",
@@ -1583,7 +1591,7 @@ import ReactDOM from "react-dom/client";
 {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "66028",
+"id": "660280",
 "name": "Burger King",
 "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/18/bae692fa-e513-4d44-94b7-0a1f3a0e404e_66028.jpg",
 "locality": "Kirti Nagar Metro Station",
@@ -1695,7 +1703,7 @@ import ReactDOM from "react-dom/client";
 {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "683154",
+"id": "6831540",
 "name": "La Pino'z Pizza",
 "cloudinaryImageId": "231e86161a0091cd2137367c39b5943e",
 "locality": "Tagore Market",
@@ -1785,22 +1793,9 @@ import ReactDOM from "react-dom/client";
          <div className="body">
             <div className="search"> search</div>
             <div className="restaurant-container">
-             <RestaurantCard resData = {reslist[0]}/>
-             <RestaurantCard resData = {reslist[1]}/>
-             <RestaurantCard resData = {reslist[2]}/>
-             <RestaurantCard resData = {reslist[3]}/>
-             <RestaurantCard resData = {reslist[4]}/>
-             <RestaurantCard resData = {reslist[5]}/>
-             <RestaurantCard resData = {reslist[6]}/>
-             <RestaurantCard resData = {reslist[7]}/>
-             <RestaurantCard resData = {reslist[14]}/>
-             <RestaurantCard resData = {reslist[15]}/>
-             <RestaurantCard resData = {reslist[13]}/>
-             <RestaurantCard resData = {reslist[12]}/>
-             <RestaurantCard resData = {reslist[10]}/>
-             <RestaurantCard resData = {reslist[11]}/>
-             <RestaurantCard resData = {reslist[8]}/>
-             <RestaurantCard resData = {reslist[9]}/>
+            {
+               reslist.map((resturnt) =>(<RestaurantCard key ={resturnt.info.id} resData ={resturnt}/>))
+            }
           
             </div>
             
