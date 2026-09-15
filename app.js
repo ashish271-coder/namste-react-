@@ -1788,6 +1788,7 @@ import ReactDOM from "react-dom/client";
 "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
 }
 ]
+//not using id (not good prectis)<<< using index as key <<< give uniquie id gppd prectis
    const Body = () => {
       return (
          <div className="body">
