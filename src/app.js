@@ -1,49 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import Header from "./components/Header";
+import Body from "./components/Body";
 
 //React element
-   const Header = () => {
-      return (
-         <div className="header">
-            <div className="logo">
-               <img
-                  src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png" alt="Logo"
-               />
-            </div>
-            <div className="nav-items">
-               <ul>
-                  <li>Home</li>
-                  <li>About</li>
-                  <li>Contact</li>
-                  <li>Cart</li>
-               </ul>
-            </div>
-         </div>
-      )
-   }
-   const RestaurantCard = (props) => {
-      const{resData} = props;
-      const {
-         cloudinaryImageId,
-         cuisines,
-         avgRating,costForTwo,
-         name
-      } = resData?.info;
-      const{deliveryTime} = resData?.info.sla;
-      return (
-         <div className="restaurant-card" style = {{ backgroundColor: "#f0f0f0" }}>
-            <img className="res-logo"
-               alt="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
-         +resData.info.cloudinaryImageId}></img>
-            <h3>{name}</h3>
-            <h4>{cuisines.join(",")}</h4>
-            <h4>{avgRating}star</h4>
-             <h4>{costForTwo}</h4>
-              <h4>{deliveryTime}minutes</h4>
-         </div>
-      );
-   };
+  
+  
    const reslist = [ 
 {
          "info": {
@@ -1789,20 +1751,7 @@ import ReactDOM from "react-dom/client";
 }
 ]
 //not using id (not good prectis)<<< using index as key <<< give uniquie id gppd prectis
-   const Body = () => {
-      return (
-         <div className="body">
-            <div className="search"> search</div>
-            <div className="restaurant-container">
-            {
-               reslist.map((resturnt) =>(<RestaurantCard key ={resturnt.info.id} resData ={resturnt}/>))
-            }
-          
-            </div>
-            
-         </div>
-      )
-   }
+  
 const Applayout = () => {
    return (
       <div className="app">
