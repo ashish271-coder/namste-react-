@@ -14,3 +14,5 @@ compress
 
 # map 
 # filter uses 
+# explore word 
+ monolithic or microlithic project 
