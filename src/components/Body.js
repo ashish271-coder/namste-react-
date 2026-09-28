@@ -3,14 +3,26 @@ import { useEffect, useState } from "react";
 import reslist from "../utils/mockData";
 
 const Body = () => {
+
+     useEffect(() => {
+      fetchData();
+   }, []);
+
    const [listOfResturent, setListOfResturent] = useState(reslist);
-      useEffect(()=>{
-       fetchData()
-      }, []);
-      const fetchData =()=>{
-         const data = fetch();
-      }
-      
+
+   const fetchData = async () => {
+      const data = await fetch(
+         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6638856&lng=77.1558861&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      );
+
+      const json = await data.json();
+
+      console.log(json);
+   //  setListOfResturent(json.data.cards);
+   };
+
+
+ 
          
 
 
