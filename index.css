@@ -18,7 +18,11 @@
     padding: 5px;
     width: 220px;
     border: 1px solid black;
+   
+    
 }
+   
+
 .restaurant-card:hover{
     border: 1px solid orangered;
     cursor: pointer;
